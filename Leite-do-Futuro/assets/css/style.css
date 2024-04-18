@@ -1,0 +1,349 @@
+/* Definição de variáveis de cor */
+:root {
+    --primary: #17067A;      /* Cor primária */
+    --secondary: #EDDD5E;    /* Cor secundária */
+    --light: #F5F5F5;        /* Cor clara */
+    --dark: #00CC00;         /* Cor escura */
+}
+
+/* Reset de estilos para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o texto centralizado */
+.text-center {
+    font-family: 'AR One Sans', sans-serif;
+}
+
+/* Estilos do corpo da página */
+body {
+    min-height: 100vh;
+    background: url("/assets/img/fundo.png") center center; /* Imagem de fundo */
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos da barra de rolagem personalizada */
+::-webkit-scrollbar {
+    width: 9px;
+    border: 1px solid #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #17067A;
+}
+
+/* Estilos dos botões */
+.btn {
+    transition: .5s;
+    font-weight: 500;
+}
+
+/* Estilos da navbar */
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+/* Estilos dos links na navbar */
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 15px 0;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+}
+
+/* Estilização dos links da navbar ao passar o mouse e ativos */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #b0b0b0;
+}
+
+/* Ícone de seta para baixo em dropdowns */
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* Responsividade da navbar */
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Aparência dos dropdowns no hover */
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+/* Ícone de usuário */
+.fa-color {
+    color: #FFF;
+}
+
+/* Estilos do título principal */
+.menu {
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #F5F5F5;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 2%;
+}
+
+/* Botão de Scroll para o Topo */
+#topo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#topo:hover {
+    background-color: #0056b3;
+}
+
+/* Adicione estilos personalizados para o botão */
+.btn-local {
+    background-color: #17067A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Estilo ao passar o mouse sobre o botão */
+  .btn-local:hover {
+    color: white;
+    background-color: #573CF0;
+  }
+  
+  .btn-local.selected {
+    background-color: #573CF0;
+    color: #fff;
+  }
+
+/* Imagem de Fundo Principal */
+main {
+    background-size: cover;
+    height: 80.8vh;
+}
+
+.fundo-navbar {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para Localidades e Mapa */
+.titulo-1 {
+    font-size: 25px;
+}
+
+/* Estilos dos Cards */
+.Card-1, .Card-2, .Card-4, .Card-5 {
+    background-color: #F5F5F5;
+    margin-top: 4vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: auto;
+}
+
+.Card-1 {
+    height: 100vh;
+}
+
+.Card-3 {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    margin-top: 5.5vh;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
+}
+
+.style-map {
+    max-width: 400px;
+    padding: 2rem;
+    position: relative;
+    background: linear-gradient(to right, #0866FF, #17067A);
+    padding: 3px;
+}
+
+.style {
+    text-align: center;
+}
+
+/* Estilos do Mapa de Calor */
+#Card-4 {
+    height: 90vh;
+    margin-top: 4vh;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.legend {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid #000;
+}
+
+/* Estilos dos parceiros */
+.parceiros {
+    height: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.parceiro {
+    width: 100%;
+    margin-left: .3px;
+    background-color: #fff;
+}
+
+.logo-1 {
+    width: 30vh;
+}
+
+.logo-2 {
+    margin-top: 20%;
+    width: 40vh;
+}
+
+.logo-3 {
+    margin-top: 7%;
+    width: 35vh;
+}
+
+.logo-4 {
+    margin-top: 5%;
+    width: 25vh;
+}
+
+.container-1 {
+    max-width: 1150px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container-1 .card {
+    position: relative;
+    padding: 10px;
+    width: 400px;
+    background-color: #F5F5F5;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container-1 .card img {
+    margin-top: 2vh;
+    height: 150px;
+    width: 150px;
+}
+
+.container-1 .card .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.parceiros-p {
+    margin-top: -25px;
+}
+
+/* Estilos para o Footer */
+.footer-img {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 150px;
+}
+
+.footer-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adicione regras para controlar a responsividade */
+
+@media (max-width: 576px) {
+    /* Adicione estilos específicos para dispositivos menores que 576px */
+    .menu {
+        font-size: 2rem;
+    }
+
+    .Card-1, .Card-2, .Card-4, .Card-5 {
+        margin-top: 2vh;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Adicione estilos específicos para dispositivos entre 577px e 768px */
+    .menu {
+        font-size: 2.5rem;
+    }
+
+    .Card-1, .Card-2, .Card-4, .Card-5 {
+        margin-top: 3vh;
+    }
+}
+
+/* Adicione mais media queries conforme necessário */

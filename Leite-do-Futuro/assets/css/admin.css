@@ -1,0 +1,216 @@
+* Definição de variáveis de cor */
+:root {
+    --primary: #008000;      /* Cor primária */
+    --secondary: #EDDD5E;    /* Cor secundária */
+    --light: #F5F5F5;        /* Cor clara */
+    --dark: #00CC00;         /* Cor escura */
+}
+
+/* Reset de estilos para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o texto centralizado */
+.text-center {
+    font-family: 'AR One Sans', sans-serif;
+}
+
+/* Estilos do corpo da página */
+body {
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #E3E6ED;
+}
+
+/* Estilos da barra de rolagem personalizada */
+::-webkit-scrollbar {
+    width: 9px;
+    border: 1px solid #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #17067A;
+}
+
+/* Estilos dos botões */
+.btn {
+    transition: .5s;
+    font-weight: 500;
+}
+
+/* Estilos da navbar */
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+/* Estilos dos links na navbar */
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 15px 0;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+}
+
+/* Estilização dos links da navbar ao passar o mouse e ativos */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #b0b0b0;
+}
+
+/* Ícone de seta para baixo em dropdowns */
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* Responsividade da navbar */
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Aparência dos dropdowns no hover */
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+/* Ícone de usuário */
+.fa-color {
+    color: #FFF;
+}
+
+/* Estilos do título principal */
+.menu {
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #F5F5F5;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 2%;
+}
+
+/* Botão de Scroll para o Topo */
+#topo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#topo:hover {
+    background-color: #17067A;
+}
+
+/* Estilos para Localidades e Mapa */
+.titulo-1 {
+    font-size: 30px;
+}
+
+/* Adiciona estilos para o novo design dos cards */
+.Card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 23vh;
+}
+.card-body {
+    position: relative;
+}
+
+.titulo-card {
+    font-size: 1rem; /* Tamanho do título menor */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+}
+
+.fa-icon-card {
+    font-size: 1.5rem; /* Tamanho do ícone */
+    color: #F8B21A; /* Cor do ícone (ajuste conforme necessário) */
+}
+
+.float-end {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0.5rem;
+    margin-right: 1.2rem;
+}
+
+.texto-card {
+    font-size: 2.2rem; /* Tamanho do texto maior */
+    margin-top: 2.5rem;
+    text-align: center; /* Alinhamento ao centro */
+}
+
+/* Estilos dos Cards */
+
+.Card-1 {
+    background-color: #F5F5F5;
+    height: 90vh;
+    margin-top: 15vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: auto;
+}
+
+.Card-2 {
+    background-color: #F5F5F5;
+    height: auto;
+    margin-top: 15vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.grafico-1{
+    margin-left: 30px;
+}
+
+.grafico-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grafico-2 canvas {
+    width: 300px; /* Largura desejada para o gráfico de pizza */
+    height: 300px; /* Altura desejada para o gráfico de pizza */
+  }
